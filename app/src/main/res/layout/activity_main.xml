@@ -8,15 +8,90 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
 
-        <RadioButton
-            android:id="@+id/radioButton"
+        android:background="@android:color/background_light"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp">
+
+            <RadioButton
+                android:id="@+id/button_dac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/editText"
+                android:layout_below="@+id/radioGroup"
+                android:layout_marginTop="90dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Dólares a Colones"
+                android:textColor="@android:color/background_dark" />
+
+            <RadioButton
+                android:id="@+id/button_cad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Colones a Dólares"
+                android:textColor="@android:color/background_dark"
+                tools:layout_editor_absoluteX="108dp"
+                tools:layout_editor_absoluteY="55dp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton"
-            tools:layout_editor_absoluteX="108dp"
-            tools:layout_editor_absoluteY="55dp" />
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/editText"
+            android:layout_marginEnd="68dp"
+            android:layout_marginTop="49dp"
+            android:background="@android:color/black"
+            android:onClick="onButtonClicked"
+            android:padding="10dp"
+            android:text="Convertir"
+            android:textColor="@android:color/background_light" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="Ingrese cantidad"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="44dp"
+            android:layout_marginStart="63dp"
+            android:text="Resultado:"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignEnd="@+id/button"
+            android:text="00"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
